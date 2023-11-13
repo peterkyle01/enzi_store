@@ -42,7 +42,9 @@ export const siteConfig = {
 	links: {
 		facebook: "#",
 		twitter: "#",
-		nextUi: "#"
+		nextUi: "#",
+		instagram: "#",
+		googleStore: "#"
 	},
 };
 

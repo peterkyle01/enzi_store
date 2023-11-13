@@ -1,13 +1,19 @@
-
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { agbalumo, fontSans, homemade_apple, luckiest_guy, permanent_marker } from "@/config/fonts";
+import {
+	agbalumo,
+	fontSans,
+	homemade_apple,
+	luckiest_guy,
+	permanent_marker,
+} from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import clsx from "clsx";
 import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "@/components/footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
 	title: {
@@ -48,10 +54,11 @@ export default function RootLayout({
 					)}>
 					<Providers themeProps={{ attribute: "class", enableSystem: true }}>
 						<div className="relative flex flex-col h-screen">
-							{/* @ts-ignore */}
+							{/* @ts-ignore*/}
 							<Navbar />
 							<main className="w-full px-2 md:px-6">{children}</main>
 							<Footer />
+							<Analytics />
 						</div>
 					</Providers>
 				</body>
