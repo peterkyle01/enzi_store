@@ -1,7 +1,8 @@
+import { withUt } from "uploadthing/tw";
 import { nextui } from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default withUt({
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -39,4 +40,4 @@ module.exports = {
 			},
 		}),
 	],
-};
+});

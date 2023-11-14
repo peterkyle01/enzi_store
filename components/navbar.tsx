@@ -48,6 +48,8 @@ export const Navbar = async () => {
 		/>
 	);
 
+
+
 	return (
 		<div className="fixed w-full h-auto z-50 ">
 			<div className="w-full h-10 fixed bg-primary relative flex justify-center items-center">
