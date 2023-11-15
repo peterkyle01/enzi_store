@@ -2,6 +2,7 @@ import { Carousel } from "@/components/carousel";
 import PopularProductCard from "@/components/popular-products-card";
 import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
+import { Link } from "@nextui-org/link";
 import {
 	BadgePercent,
 	BusFront,
@@ -11,7 +12,23 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-export default function Home() {
+async function getProducts() {
+	const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/product`, {
+		next: { revalidate: 3600 },
+	});
+
+	if (!res.ok) {
+		return "Failed to fetch data!";
+	}
+
+	const data = await res.json();
+
+	return data.reverse().slice(0, 4);
+}
+
+export default async function Home() {
+	const products = await getProducts();
+
 	return (
 		<div className="mt-16">
 			<section className="w-full h-auto relative">
@@ -227,9 +244,11 @@ export default function Home() {
 				<p className="text-3xl text-center font-agbalumo mb-8 md:mb-12">
 					Our popular product
 				</p>
-				<PopularProductCard />
+				<PopularProductCard products={products} />
 				<div className="h-10 flex items-center justify-center my-6">
 					<Button
+						as={Link}
+						href="/shop"
 						color="primary"
 						className="md:w-1/4">
 						See all product

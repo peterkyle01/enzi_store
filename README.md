@@ -1,40 +1,36 @@
-# Next.js & NextUI Template
+# Enzi Store WebApp
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+This is a hardware store where users can see and order the available products.
 
-## Technologies Used
+The admins can add,edit and delete products.
 
-- [Next.js 13](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+# Techstack Used
+The following technologies were used in the development of this app:
 
-## How to Use
+* [Next Js](https://nextjs.org/)
+* [Next UI](https://nextui.org/)
+* [Typescript](https://www.typescriptlang.org/)
+* [UploadThing](https://uploadthing.com/)
+* [Tailwind](https://tailwindcss.com/)
+* [Lucide](https://lucide.dev/)
+* [Clerk](https://clerk.com/)
 
+# How to run the app
 
-### Use the template with create-next-app
+1. Open the IDE of your choice.
 
-To create a new project based on this template using `create-next-app`, run the following command:
+2. Open the terminal and git clone the main branch.
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+3. Make a `.env` file in the root folder and copy the `.env.example`.
 
-### Install dependencies
+4. Get the ApiKeys listed in the `.env` respectively. 
 
-```bash
-npm install
-```
+5. Make sure you have [node](https://nodejs.org/en/) or [bun](https://bun.sh/) installed.
 
-### Run the development server
+6. Run `npm install ` or `bun install` in the terminal. This will install all dependencies.
 
-```bash
-npm run dev
-```
+7. While still in the terminal , run `npm run dev` or `bun run dev`.
 
-## License
+8. The server will start on `http://localhost:3000` on your browser
 
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+9. Hit `http://localhost:3000` to get the home page.

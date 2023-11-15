@@ -4,9 +4,11 @@ import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { ProductType } from "@/types";
 import { useProductCategory } from "@/app/hooks/useProductCategory";
+import { Button } from "@nextui-org/button";
+import { Plus } from "lucide-react";
 
 export default function ProductCard({ name, image, price }: ProductType) {
-	const {category} = useProductCategory()
+	const { category } = useProductCategory();
 	return (
 		<Card
 			shadow="sm"
@@ -32,6 +34,12 @@ export default function ProductCard({ name, image, price }: ProductType) {
 					<span className="text-primary"> {price}</span>
 				</p>
 			</CardFooter>
+			<Button
+				color="primary"
+				size="sm"
+				className="absolute z-10 top-0 right-0 m-2">
+				<Plus />
+			</Button>
 		</Card>
 	);
 }

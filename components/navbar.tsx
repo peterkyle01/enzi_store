@@ -8,9 +8,7 @@ import {
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
 import { Image } from "@nextui-org/image";
 import { Badge } from "@nextui-org/badge";
 
@@ -21,8 +19,9 @@ import NextLink from "next/link";
 import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Facebook, Search, ShoppingCart, Twitter } from "lucide-react";
+import { Car, Facebook, Search, ShoppingCart, Twitter } from "lucide-react";
 import { UserButton, currentUser } from "@clerk/nextjs";
+import Cart from "./cart";
 
 export const Navbar = async () => {
 	const user = await currentUser();
@@ -102,6 +101,7 @@ export const Navbar = async () => {
 							<Facebook size={18} />
 						</Link>
 						<ThemeSwitch />
+						<Cart />
 					</NavbarItem>
 					<NavbarItem className="hidden md:flex">
 						{user ? (
@@ -132,20 +132,7 @@ export const Navbar = async () => {
 					className="sm:hidden basis-1 pl-4"
 					justify="end">
 					<ThemeSwitch />
-					<Badge
-						content="9"
-						shape="circle"
-						color="danger">
-						<Button
-							size="sm"
-							radius="full"
-							isIconOnly
-							aria-label="shopping cart"
-							variant="light">
-							<ShoppingCart size={20} />
-						</Button>
-					</Badge>
-
+					<Cart />
 					<NavbarMenuItem>
 						<UserButton afterSignOutUrl="/" />
 					</NavbarMenuItem>
@@ -180,7 +167,6 @@ export const Navbar = async () => {
 							</Link>
 						)}
 					</NavbarMenuItem>
-
 					<NavbarMenuItem className="flex gap-2">
 						{!user && (
 							<>
