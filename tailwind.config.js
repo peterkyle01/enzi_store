@@ -29,11 +29,13 @@ export default withUt({
 			themes: {
 				dark: {
 					colors: {
+						background: "#26597a",
 						primary: "#ea580c",
 					},
 				},
 				light: {
 					colors: {
+						background: "#45a0dd",
 						primary: "#fb923c",
 					},
 				},

@@ -25,3 +25,20 @@ export type ProductCategory =
 	| "electrical"
 	| "farming"
 	| "tools";
+
+export type useProductCategoryType = {
+	category:ProductCategory,
+	setCategory:(newCategory:ProductCategory) => void
+}
+
+export type useSearchValueType = {
+	value: string;
+	setValue: (newValue: string) => void;
+};
+
+export type useDataType = {
+	stateProducts: ProductType[];
+	filteredProducts: ProductType[];
+	setStateProducts: (newStateProducts: ProductType[]) => void;
+	setFilteredProducts: (newFilteredProducts: ProductType[]) => void;
+};

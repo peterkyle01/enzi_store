@@ -19,11 +19,7 @@ export const siteConfig = {
 		{
 			label: "Contact",
 			href: "/contact",
-		},
-		{
-			label: "Admin",
-			href: "/admin/edit_product",
-		},
+		}
 	],
 	navMenuItems: [
 		{
@@ -41,11 +37,7 @@ export const siteConfig = {
 		{
 			label: "Contact",
 			href: "/contact",
-		},
-		{
-			label: "Admin",
-			href: "/admin/edit_product",
-		},
+		}
 	],
 	links: {
 		facebook: "#",

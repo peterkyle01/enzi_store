@@ -71,7 +71,7 @@ export default function RootLayout({
 						<div className="relative flex flex-col h-screen">
 							{/* @ts-ignore*/}
 							<Navbar />
-							<main className="w-full px-2 md:px-6">{children}</main>
+							<main className="w-full px-2 mt-12 md:px-6">{children}</main>
 							<Footer />
 							<Toaster richColors/>
 							<Analytics />

@@ -26,29 +26,8 @@ import { UserButton, currentUser } from "@clerk/nextjs";
 
 export const Navbar = async () => {
 	const user = await currentUser();
-	const searchInput = (
-		<Input
-			size="sm"
-			aria-label="Search"
-			classNames={{
-				inputWrapper: "bg-default-100",
-				input: "text-sm",
-			}}
-			endContent={
-				<Kbd
-					className="hidden lg:inline-block"
-					keys={["command"]}>
-					K
-				</Kbd>
-			}
-			labelPlacement="outside"
-			placeholder="Search..."
-			startContent={<Search size={18} />}
-			type="search"
-		/>
-	);
 
-
+	const adminEmail = "susanoyole1234@gmail.com";
 
 	return (
 		<div className="fixed w-full h-auto z-50 ">
@@ -95,6 +74,15 @@ export const Navbar = async () => {
 								</NextLink>
 							</NavbarItem>
 						))}
+						<NavbarItem>
+							{user?.emailAddresses[0].emailAddress === adminEmail && (
+								<NextLink
+									color="success"
+									href="/admin/add_product">
+									Admin
+								</NextLink>
+							)}
+						</NavbarItem>
 					</ul>
 				</NavbarContent>
 				<NavbarContent
@@ -115,7 +103,6 @@ export const Navbar = async () => {
 						</Link>
 						<ThemeSwitch />
 					</NavbarItem>
-					<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
 					<NavbarItem className="hidden md:flex">
 						{user ? (
 							<UserButton afterSignOutUrl="/" />
@@ -158,13 +145,42 @@ export const Navbar = async () => {
 							<ShoppingCart size={20} />
 						</Button>
 					</Badge>
-					<NavbarMenuToggle />
-				</NavbarContent>
-				<NavbarMenu>
-					<NavbarMenuItem className="flex justify-center items-center gap-4">
-						{searchInput}
+
+					<NavbarMenuItem>
 						<UserButton afterSignOutUrl="/" />
 					</NavbarMenuItem>
+					<NavbarMenuToggle />
+				</NavbarContent>
+				<NavbarMenu className="top-24">
+					<div className="flex flex-col gap-2">
+						{siteConfig.navMenuItems.map((item, index) => (
+							<NavbarMenuItem key={`${item}-${index}`}>
+								<Link
+									color={
+										index === 2
+											? "primary"
+											: index === siteConfig.navMenuItems.length - 1
+											? "danger"
+											: "foreground"
+									}
+									href={item.href}
+									size="lg">
+									{item.label}
+								</Link>
+							</NavbarMenuItem>
+						))}
+					</div>
+					<NavbarMenuItem>
+						{user?.emailAddresses[0].emailAddress === adminEmail && (
+							<Link
+								size="lg"
+								color="success"
+								href="/admin/add_product">
+								Admin
+							</Link>
+						)}
+					</NavbarMenuItem>
+
 					<NavbarMenuItem className="flex gap-2">
 						{!user && (
 							<>
@@ -187,24 +203,6 @@ export const Navbar = async () => {
 							</>
 						)}
 					</NavbarMenuItem>
-					<div className=" mt-2 flex flex-col gap-2">
-						{siteConfig.navMenuItems.map((item, index) => (
-							<NavbarMenuItem key={`${item}-${index}`}>
-								<Link
-									color={
-										index === 2
-											? "primary"
-											: index === siteConfig.navMenuItems.length - 1
-											? "danger"
-											: "foreground"
-									}
-									href="#"
-									size="lg">
-									{item.label}
-								</Link>
-							</NavbarMenuItem>
-						))}
-					</div>
 				</NavbarMenu>
 			</NextUINavbar>
 		</div>

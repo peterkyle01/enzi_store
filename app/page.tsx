@@ -52,7 +52,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="w-full h-24 md:h-32 flex text-gray-400">
+			<section className="w-full h-24 md:h-32 flex">
 				<div className="w-full h-full flex">
 					<p className="m-auto font-agbalumo md:text-3xl">Safaricom</p>
 				</div>
@@ -70,12 +70,12 @@ export default function Home() {
 				<h1 className="text-center my-6 text-3xl font-agbalumo">
 					Exclusive Products
 				</h1>
-				<h3 className="text-center my-8 text-md md:text-lg italic text-gray-500">
+				<h3 className="text-center my-8 text-md md:text-lg italic ">
 					Check out this week&apos;s selection of popular products.
 				</h3>
 				<div className="w-full h-80 md:h-96 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
 					<div className="w-full h-full flex flex-col">
-						<div className="rounded-md w-full h-full bg-gray-500 relative overflow-hidden">
+						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
 								src={"/main.webp"}
 								fill
@@ -85,7 +85,7 @@ export default function Home() {
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
 					</div>
 					<div className="w-full h-full flex flex-col">
-						<div className="rounded-md w-full h-full bg-gray-500 relative overflow-hidden">
+						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
 								src={"/main.webp"}
 								fill
@@ -95,7 +95,7 @@ export default function Home() {
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
 					</div>
 					<div className="w-full h-full flex flex-col hidden md:flex">
-						<div className="rounded-md w-full h-full bg-gray-500 relative overflow-hidden">
+						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
 								src={"/main.webp"}
 								fill
@@ -105,7 +105,7 @@ export default function Home() {
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
 					</div>
 					<div className="w-full h-full flex flex-col hidden md:flex">
-						<div className="rounded-md w-full h-full bg-gray-500 relative overflow-hidden">
+						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
 								src={"/main.webp"}
 								fill
@@ -120,7 +120,7 @@ export default function Home() {
 				<h1 className="text-center my-6 text-3xl font-agbalumo">
 					Our Features Special For You
 				</h1>
-				<h3 className="text-center my-8 text-sm md:text-lg italic text-gray-500">
+				<h3 className="text-center my-8 text-sm md:text-lg italic ">
 					We provide a variety of special features for all of you , to make it
 					easier and you even more happy shopping here.
 				</h3>
@@ -134,7 +134,7 @@ export default function Home() {
 						</i>
 
 						<p className="font-bold text-black md:text-xl">Easy payment</p>
-						<p className="text-gray-400 text-sm">
+						<p className="text-gray-500 text-sm">
 							very easy and fast payment to make it easier for users
 						</p>
 					</div>
@@ -147,7 +147,7 @@ export default function Home() {
 						</i>
 
 						<p className="font-bold text-black md:text-xl">Lots of promos</p>
-						<p className="text-gray-400 text-sm">
+						<p className="text-gray-500 text-sm">
 							losts of interesting promotions and vouchers waiting for you
 						</p>
 					</div>
@@ -160,7 +160,7 @@ export default function Home() {
 						</i>
 
 						<p className="font-bold text-black md:text-xl">Fast shipping</p>
-						<p className="text-gray-400 text-sm">
+						<p className="text-gray-500 text-sm">
 							fast delivery and can reach to the ends of the worlds
 						</p>
 					</div>
@@ -173,7 +173,7 @@ export default function Home() {
 						</i>
 
 						<p className="font-bold text-black md:text-xl">Save in cart</p>
-						<p className="text-gray-400 text-sm">
+						<p className="text-gray-500 text-sm">
 							marketplace that is easy to use and doesnt bother our users at all
 						</p>
 					</div>
@@ -181,7 +181,7 @@ export default function Home() {
 			</section>
 			<section className="w-full h-auto py-6">
 				<div className="w-full h-96 flex flex-col gap-8 my-10 md:m-0 md:flex-row-reverse md:gap-12 md:p-8">
-					<div className="w-full h-full bg-red-600 relative rounded-md overflow-hidden">
+					<div className="w-full h-full relative rounded-md overflow-hidden">
 						<Image
 							src={"/main.webp"}
 							fill
@@ -252,7 +252,7 @@ export default function Home() {
 							Complete store with everything i needed
 						</p>
 					</span>
-					<p className="py-8 text-gray-400 italic md:py-10 md:pr-40">
+					<p className="py-8 font-thin italic md:py-10 md:pr-40">
 						Everything is increasingly integrated so that buying becomes more
 						efficient,just click on the store ready to order and the goods will
 						be sent as soon as possible.When the goods have arrived ,an order

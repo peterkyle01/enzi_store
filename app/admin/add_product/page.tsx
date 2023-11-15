@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { ProductCategory, ProductType } from "@/types";
 import { UploadButton } from "@/utils/uploadthing";
 import { Select, SelectItem } from "@nextui-org/select";
+import { Image } from "@nextui-org/image";
 
 export default function AddProduct() {
 	const [name, setName] = useState("");
@@ -24,7 +25,7 @@ export default function AddProduct() {
 				product
 			);
 		},
-		
+
 		onSuccess: () => {
 			toast.success(" Product has been saved successfully!");
 		},
@@ -37,9 +38,17 @@ export default function AddProduct() {
 		<div className="w-full md:w-1/2 h-full">
 			<Card>
 				<CardHeader>
-					<CardHeader>Add Product</CardHeader>
+					<CardHeader className="font-agbalumo text-lg">Add Product</CardHeader>
 				</CardHeader>
 				<CardBody className="space-y-1">
+					{image && (
+						<div className="my-2 relative h-40 place-self-center rounded-md overflow-hidden md:w-1/2 md:h-60 ">
+							<Image
+								src={image}
+								alt={image}
+							/>
+						</div>
+					)}
 					<UploadButton
 						endpoint="imageUploader"
 						onClientUploadComplete={(files) => {
@@ -50,6 +59,7 @@ export default function AddProduct() {
 							toast.error(`ERROR! ${error.message}`);
 						}}
 					/>
+
 					<div className="space-y-2">
 						<label htmlFor="name">Name:</label>
 						<Input
@@ -93,7 +103,7 @@ export default function AddProduct() {
 						onClick={() => {
 							mutate({ name, image, price, category });
 						}}>
-						Save
+						{isPending ? "Saving..." : "Save"}
 					</Button>
 				</CardFooter>
 			</Card>

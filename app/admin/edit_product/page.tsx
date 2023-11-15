@@ -2,7 +2,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { ProductType } from "@/types";
-import EditProductCard from "@/components/edit-products-card";
+import EditProductCard from "@/app/admin/edit_product/edit-products-card";
 
 export default function EditProduct() {
 	const { data: products } = useQuery({
@@ -17,7 +17,7 @@ export default function EditProduct() {
 	});
 
 	return (
-		<div className="w-full md:w-1/2 h-full overflow-y-scroll">
+		<div className="w-full md:w-1/2 min-h-screen overflow-y-scroll">
 			<h1 className="flex justify-center items-center font-black">
 				Edit Available Product
 			</h1>
