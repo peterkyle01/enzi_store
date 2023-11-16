@@ -47,6 +47,7 @@ export default function Footer() {
 								src="/google-store.jpg"
 								alt="google-store"
 								fill
+								className="object-cover"
 							/>
 						</div>
 						<p className=" font-semibold">Secured Payment Gateway</p>
@@ -55,6 +56,7 @@ export default function Footer() {
 								src="/mpesa.jpg"
 								alt="mpesa"
 								fill
+								className="object-cover"
 							/>
 						</div>
 					</div>

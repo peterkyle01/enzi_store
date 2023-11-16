@@ -58,7 +58,7 @@ export default function ContactPage() {
 									className="border-2 rounded-md p-2 placeholder:text-sm placeholder:text-gray-500"
 									rows={5}
 									id="message"
-									placeholder="hey can i book two rooms ..."
+									placeholder="hey can i make a custom order  ..."
 									value={message}
 									//@ts-ignore
 									onChange={(e) => setMessage(e.target.value)}

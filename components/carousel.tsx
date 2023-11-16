@@ -19,6 +19,7 @@ export const Carousel = () => {
 						priority
 						fill
 						alt="NextUI hero Image"
+						className="object-cover"
 						src={"/main.webp"}
 					/>
 				</div>
@@ -26,6 +27,7 @@ export const Carousel = () => {
 					<Image
 						fill
 						alt="NextUI hero Image"
+						className="object-cover"
 						src={"/main.webp"}
 					/>
 				</div>
@@ -33,6 +35,7 @@ export const Carousel = () => {
 					<Image
 						fill
 						alt="NextUI hero Image"
+						className="object-cover"
 						src={"/main.webp"}
 					/>
 				</div>
@@ -40,6 +43,7 @@ export const Carousel = () => {
 					<Image
 						fill
 						alt="NextUI hero Image"
+						className="object-cover"
 						src={"/main.webp"}
 					/>
 				</div>

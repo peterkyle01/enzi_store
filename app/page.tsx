@@ -97,6 +97,7 @@ export default async function Home() {
 								src={"/main.webp"}
 								fill
 								alt="main.webp"
+								className="object-cover"
 							/>
 						</div>
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
@@ -107,6 +108,7 @@ export default async function Home() {
 								src={"/main.webp"}
 								fill
 								alt="main.webp"
+								className="object-cover"
 							/>
 						</div>
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
@@ -117,6 +119,7 @@ export default async function Home() {
 								src={"/main.webp"}
 								fill
 								alt="main.webp"
+								className="object-cover"
 							/>
 						</div>
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
@@ -127,6 +130,7 @@ export default async function Home() {
 								src={"/main.webp"}
 								fill
 								alt="main.webp"
+								className="object-cover"
 							/>
 						</div>
 						<p className="text-center text-sm font-sans m-2">Living Room</p>
@@ -203,6 +207,7 @@ export default async function Home() {
 							src={"/main.webp"}
 							fill
 							alt="main.webp"
+							className="object-cover"
 						/>
 					</div>
 					<div className="w-full h-full flex flex-col justify-evenly items-start py-4">
@@ -224,6 +229,7 @@ export default async function Home() {
 							src={"/main.webp"}
 							fill
 							alt="main.webp"
+							className="object-cover"
 						/>
 					</div>
 					<div className="w-full h-full flex flex-col justify-evenly items-start py-4">
@@ -292,6 +298,7 @@ export default async function Home() {
 							src={"/main.webp"}
 							fill
 							alt="main.webp"
+							className="object-cover"
 						/>
 					</div>
 				</div>

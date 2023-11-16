@@ -13,7 +13,7 @@ export default async function page() {
 			<h1 className="text-center my-6 font-luckiest_guy">
 				<CategoryHeading />
 			</h1>
-			<div className="w-full h-auto grid grid-cols-2 md:grid-cols-4 gap-2">
+			<div className="w-full h-auto grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2">
 				<ShopProduct />
 			</div>
 		</section>
