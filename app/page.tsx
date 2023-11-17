@@ -33,7 +33,7 @@ export default async function Home() {
 		<div className="mt-16">
 			<section className="w-full h-auto relative">
 				<Carousel />
-				<div className="w-full h-98 absolute top-0 bg-black/50  rounded-md"></div>
+				<div className="w-full h-98 absolute top-0 bg-black/40  rounded-md"></div>
 				<div className="w-full h-98 absolute top-0 rounded-md text-white p-2 md:p-20">
 					<div className="w-full h-full flex flex-col justify-center gap-8">
 						<p className="sm:w-1/2 text-4xl font-agbalumo">
@@ -44,7 +44,12 @@ export default async function Home() {
 							doloribus aut esse enim architecto eum. Explicabo sapiente rerum
 						</p>
 						<span className="sm:w-1/2 flex justify-start gap-10 items-center">
-							<Button color="primary">Shop now</Button>
+							<Button
+								as={Link}
+								href="/shop"
+								color="primary">
+								Shop now
+							</Button>
 							<div className="max-w-md">
 								<div className="flex h-5 items-center space-x-2 text-small">
 									<div className="">
@@ -94,46 +99,48 @@ export default async function Home() {
 					<div className="w-full h-full flex flex-col">
 						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
-								src={"/main.webp"}
+								src={"/smallpaint.jpeg"}
 								fill
 								alt="main.webp"
 								className="object-cover"
 							/>
 						</div>
-						<p className="text-center text-sm font-sans m-2">Living Room</p>
+						<p className="text-center text-sm font-sans m-2">Paint</p>
 					</div>
 					<div className="w-full h-full flex flex-col">
 						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
-								src={"/main.webp"}
+								src={"/white-cement.jpeg"}
 								fill
 								alt="main.webp"
 								className="object-cover"
 							/>
 						</div>
-						<p className="text-center text-sm font-sans m-2">Living Room</p>
+						<p className="text-center text-sm font-sans m-2">White Cement</p>
 					</div>
 					<div className="w-full h-full flex flex-col hidden md:flex">
 						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
-								src={"/main.webp"}
+								src={"/cement.jpeg"}
 								fill
 								alt="main.webp"
 								className="object-cover"
 							/>
 						</div>
-						<p className="text-center text-sm font-sans m-2">Living Room</p>
+						<p className="text-center text-sm font-sans m-2">Cement</p>
 					</div>
 					<div className="w-full h-full flex flex-col hidden md:flex">
 						<div className="rounded-md w-full h-full relative overflow-hidden">
 							<Image
-								src={"/main.webp"}
+								src={"/waterproof-cement.jpeg"}
 								fill
 								alt="main.webp"
 								className="object-cover"
 							/>
 						</div>
-						<p className="text-center text-sm font-sans m-2">Living Room</p>
+						<p className="text-center text-sm font-sans m-2">
+							Waterproof Cement
+						</p>
 					</div>
 				</div>
 			</section>
@@ -201,13 +208,13 @@ export default async function Home() {
 				</div>
 			</section>
 			<section className="w-full h-auto py-6">
-				<div className="w-full h-96 flex flex-col gap-8 my-10 md:m-0 md:flex-row-reverse md:gap-12 md:p-8">
+				<div className="w-full h-98 flex flex-col gap-8 my-10 md:m-0 md:flex-row-reverse md:gap-12 md:p-8">
 					<div className="w-full h-full relative rounded-md overflow-hidden">
 						<Image
-							src={"/main.webp"}
+							src={"/one.webp"}
 							fill
 							alt="main.webp"
-							className="object-cover"
+							className="object-cover h-96"
 						/>
 					</div>
 					<div className="w-full h-full flex flex-col justify-evenly items-start py-4">
@@ -223,10 +230,10 @@ export default async function Home() {
 						<Button color="primary">Read more...</Button>
 					</div>
 				</div>
-				<div className="w-full h-96 flex flex-col gap-8 my-10 md:m-0 md:flex-row  md:gap-12 md:p-8">
+				<div className="w-full h-98 flex flex-col gap-8 my-10 md:m-0 md:flex-row  md:gap-12 md:p-8">
 					<div className="w-full h-full bg-red-600 relative rounded-md overflow-hidden">
 						<Image
-							src={"/main.webp"}
+							src={"/two.jpg"}
 							fill
 							alt="main.webp"
 							className="object-cover"
@@ -285,7 +292,7 @@ export default async function Home() {
 					</p>
 					<span className="py-6">
 						<p className="text-2xl text-start font-sans font-bold">
-							Peterkyle01
+							Mwanaisha Mohammed
 						</p>
 						<p className="text-xl text-start font-sans font-thin italic">
 							Civil Engineer
@@ -301,17 +308,6 @@ export default async function Home() {
 							className="object-cover"
 						/>
 					</div>
-				</div>
-			</section>
-			<section className="w-full h-56 md:h-96 flex justify-center">
-				<div className="w-full h-full border-2 border-primary rounded-md md:w-1/2 bg-slate-400">
-					<iframe
-						width="100%"
-						height="100%"
-						src="https://www.youtube.com/embed/mRD0-GxqHVo?si=-ZkuEb_vtCCdjK2c"
-						title="YouTube video player"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowFullScreen></iframe>
 				</div>
 			</section>
 		</div>

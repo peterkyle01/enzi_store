@@ -12,7 +12,7 @@ export default function PopularProductCard({
 	products: ProductType[];
 }) {
 	return (
-		<div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
+		<div className="w-full h-auto grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2">
 			{products.map((product, index) => (
 				<Card
 					shadow="sm"

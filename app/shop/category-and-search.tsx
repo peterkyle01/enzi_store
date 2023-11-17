@@ -35,17 +35,36 @@ export default function CategoryAndSearch() {
 				placeholder="Select a category"
 				selectionMode="single"
 				className="max-w-xs"
-				defaultSelectedKeys={["tools"]}
+				defaultSelectedKeys={["Cement"]}
 				onSelectionChange={(value) =>
 					//@ts-ignore
 					setCategory(value.anchorKey as ProductCategory)
 				}>
-				<SelectItem key={"building"}>Building</SelectItem>
-				<SelectItem key={"plumbing"}>Plumbing</SelectItem>
-				<SelectItem key={"cleaning"}>Cleaning</SelectItem>
-				<SelectItem key={"electrical"}>Electrical</SelectItem>
-				<SelectItem key={"farming"}>Farming</SelectItem>
-				<SelectItem key={"tools"}>Tools</SelectItem>
+				<SelectItem key={"Cement"}>Cement</SelectItem>
+				<SelectItem key={"SteelRods"}>SteelRods</SelectItem>
+				<SelectItem key={"SteelBars"}>SteelBars</SelectItem>
+				<SelectItem key={"Bolts&Nuts&Screws"}>Bolts&Nuts&Screws</SelectItem>
+				<SelectItem key={"HingesAndTopers"}>HingesAndTopers</SelectItem>
+				<SelectItem key={"SandPaper"}>SandPaper</SelectItem>
+				<SelectItem key={"Nails"}>Nails</SelectItem>
+				<SelectItem key={"IronSheets"}>IronSheets</SelectItem>
+				<SelectItem key={"PaintsAndCoating"}>PaintsAndCoating</SelectItem>
+				<SelectItem key={"Glue"}>Glue</SelectItem>
+				<SelectItem key={"Brushes"}>Brushes</SelectItem>
+				<SelectItem key={"Tools"}>Tools</SelectItem>
+				<SelectItem key={"WooodAndTimber"}>WooodAndTimber</SelectItem>
+				<SelectItem key={"Welding"}>Welding</SelectItem>
+				<SelectItem key={"Plumbing"}>Plumbing</SelectItem>
+				<SelectItem key={"Pipes"}>Pipes</SelectItem>
+				<SelectItem key={"ElectricalWires"}>ElectricalWires</SelectItem>
+				<SelectItem key={"BulbsAndHolders"}>BulbsAndHolders</SelectItem>
+				<SelectItem key={"StichesAndBoxes"}>StichesAndBoxes</SelectItem>
+				<SelectItem key={"Sockets"}>Sockets</SelectItem>
+				<SelectItem key={"JunctionsAndRoundBoxesAndCovers"}>
+					JunctionsAndRoundBoxesAndCovers
+				</SelectItem>
+				<SelectItem key={"Breakers"}>Breakers</SelectItem>
+				<SelectItem key={"Tapes"}>Tapes</SelectItem>
 			</Select>
 			<Input
 				className="md:w-1/2"

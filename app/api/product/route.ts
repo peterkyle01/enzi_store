@@ -1,7 +1,6 @@
 import { db } from "@/db";
 import { product } from "@/db/schema";
 import { ProductType } from "@/types";
-import { equal } from "assert";
 import { eq } from "drizzle-orm";
 import { NextRequest, NextResponse } from "next/server";
 

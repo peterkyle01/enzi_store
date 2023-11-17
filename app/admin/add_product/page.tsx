@@ -13,9 +13,9 @@ import { Image } from "@nextui-org/image";
 
 export default function AddProduct() {
 	const [name, setName] = useState("");
-	const [price, setPrice] = useState(0);
+	const [price, setPrice] = useState(500);
 	const [image, setImage] = useState("");
-	const [category, setCategory] = useState<ProductCategory>("tools");
+	const [category, setCategory] = useState<ProductCategory>("Cement");
 
 	const { mutate, isPending } = useMutation({
 		mutationKey: ["savingMutationKey"],
@@ -72,6 +72,7 @@ export default function AddProduct() {
 					<div className="space-y-2">
 						<label htmlFor="price">Price:</label>
 						<input
+							className="w-full h-12 rounded-md p-1"
 							id="price"
 							type="number"
 							placeholder="500"
@@ -89,12 +90,33 @@ export default function AddProduct() {
 								//@ts-ignore
 								setCategory(value.anchorKey as ProductCategory)
 							}>
-							<SelectItem key={"building"}>Building</SelectItem>
-							<SelectItem key={"plumbing"}>Plumbing</SelectItem>
-							<SelectItem key={"cleaning"}>Cleaning</SelectItem>
-							<SelectItem key={"electrical"}>Electrical</SelectItem>
-							<SelectItem key={"farming"}>Farming</SelectItem>
-							<SelectItem key={"tools"}>Tools</SelectItem>
+							<SelectItem key={"Cement"}>Cement</SelectItem>
+							<SelectItem key={"SteelRods"}>SteelRods</SelectItem>
+							<SelectItem key={"SteelBars"}>SteelBars</SelectItem>
+							<SelectItem key={"Bolts&Nuts&Screws"}>
+								Bolts&Nuts&Screws
+							</SelectItem>
+							<SelectItem key={"HingesAndTopers"}>HingesAndTopers</SelectItem>
+							<SelectItem key={"SandPaper"}>SandPaper</SelectItem>
+							<SelectItem key={"Nails"}>Nails</SelectItem>
+							<SelectItem key={"IronSheets"}>IronSheets</SelectItem>
+							<SelectItem key={"PaintsAndCoating"}>PaintsAndCoating</SelectItem>
+							<SelectItem key={"Glue"}>Glue</SelectItem>
+							<SelectItem key={"Brushes"}>Brushes</SelectItem>
+							<SelectItem key={"Tools"}>Tools</SelectItem>
+							<SelectItem key={"WooodAndTimber"}>WooodAndTimber</SelectItem>
+							<SelectItem key={"Welding"}>Welding</SelectItem>
+							<SelectItem key={"Plumbing"}>Plumbing</SelectItem>
+							<SelectItem key={"Pipes"}>Pipes</SelectItem>
+							<SelectItem key={"ElectricalWires"}>ElectricalWires</SelectItem>
+							<SelectItem key={"BulbsAndHolders"}>BulbsAndHolders</SelectItem>
+							<SelectItem key={"StichesAndBoxes"}>StichesAndBoxes</SelectItem>
+							<SelectItem key={"Sockets"}>Sockets</SelectItem>
+							<SelectItem key={"JunctionsAndRoundBoxesAndCovers"}>
+								JunctionsAndRoundBoxesAndCovers
+							</SelectItem>
+							<SelectItem key={"Breakers"}>Breakers</SelectItem>
+							<SelectItem key={"Tapes"}>Tapes</SelectItem>
 						</Select>
 					</div>
 				</CardBody>

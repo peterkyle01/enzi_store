@@ -4,32 +4,43 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 	size?: number;
 };
 
+export type ProductCategory =
+	| "Cement"
+	| "SteelRods"
+	| "SteelBars"
+	| "Bolts&Nuts&Screws"
+	| "HingesAndTopers"
+	| "SandPaper"
+	| "Nails"
+	| "IronSheets"
+	| "PaintsAndCoating"
+	| "Glue"
+	| "Brushes"
+	| "Tools"
+	| "WooodAndTimber"
+	| "Welding"
+	| "Plumbing"
+	| "Pipes"
+	| "ElectricalWires"
+	| "BulbsAndHolders"
+	| "StichesAndBoxes"
+	| "Sockets"
+	| "JunctionsAndRoundBoxesAndCovers"
+	| "Breakers"
+	| "Tapes";
+
 export type ProductType = {
 	id?: number;
 	name: string;
 	image: string;
 	price: number;
-	category:
-		| "building"
-		| "plumbing"
-		| "cleaning"
-		| "electrical"
-		| "farming"
-		| "tools";
+	category: ProductCategory;
 };
 
-export type ProductCategory =
-	| "building"
-	| "plumbing"
-	| "cleaning"
-	| "electrical"
-	| "farming"
-	| "tools";
-
 export type useProductCategoryType = {
-	category:ProductCategory,
-	setCategory:(newCategory:ProductCategory) => void
-}
+	category: ProductCategory;
+	setCategory: (newCategory: ProductCategory) => void;
+};
 
 export type useSearchValueType = {
 	value: string;

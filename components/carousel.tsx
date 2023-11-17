@@ -19,32 +19,32 @@ export const Carousel = () => {
 						priority
 						fill
 						alt="NextUI hero Image"
-						className="object-cover"
-						src={"/main.webp"}
+						className="object-cover object-top"
+						src={"/home-bg.jpeg"}
 					/>
 				</div>
 				<div className="embla__slide relative w-full h-full flex-none">
 					<Image
 						fill
 						alt="NextUI hero Image"
-						className="object-cover"
-						src={"/main.webp"}
+						className="object-cover object-top"
+						src={"/home-bg.jpeg"}
 					/>
 				</div>
 				<div className="embla__slide relative w-full h-full flex-none">
 					<Image
 						fill
 						alt="NextUI hero Image"
-						className="object-cover"
-						src={"/main.webp"}
+						className="object-cover object-top"
+						src={"/home-bg.jpeg"}
 					/>
 				</div>
 				<div className="embla__slide relative w-full h-full flex-none">
 					<Image
 						fill
 						alt="NextUI hero Image"
-						className="object-cover"
-						src={"/main.webp"}
+						className="object-cover object-top"
+						src={"/home-bg.jpeg"}
 					/>
 				</div>
 			</div>
