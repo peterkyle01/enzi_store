@@ -25,10 +25,7 @@ import Cart from "./cart";
 export const Navbar = async () => {
 	const user = await currentUser();
 
-	const adminEmails = {
-		emailOne: "mwanaishabayaa@gmail.com",
-		emailTwo: "susanoyole1234@gmail.com",
-	};
+	const adminEmail = "mwanaishabayaa@gmail.com";
 
 	return (
 		<div className="fixed w-full h-auto z-50 ">
@@ -76,15 +73,13 @@ export const Navbar = async () => {
 							</NavbarItem>
 						))}
 						<NavbarItem>
-							{user?.emailAddresses[0].emailAddress === adminEmails.emailOne ||
-								(user?.emailAddresses[0].emailAddress ===
-									adminEmails.emailTwo && (
-									<NextLink
-										color="success"
-										href="/admin/add_product">
-										Admin
-									</NextLink>
-								))}
+							{user?.emailAddresses[0].emailAddress == adminEmail && (
+								<NextLink
+									color="success"
+									href="/admin/add_product">
+									Admin
+								</NextLink>
+							)}
 						</NavbarItem>
 					</ul>
 				</NavbarContent>
@@ -162,15 +157,13 @@ export const Navbar = async () => {
 						))}
 					</div>
 					<NavbarMenuItem>
-						{user?.emailAddresses[0].emailAddress === adminEmails.emailOne ||
-							(user?.emailAddresses[0].emailAddress ===
-								adminEmails.emailTwo && (
-								<NextLink
-									color="success"
-									href="/admin/add_product">
-									Admin
-								</NextLink>
-							))}
+						{user?.emailAddresses[0].emailAddress == adminEmail && (
+							<NextLink
+								color="success"
+								href="/admin/add_product">
+								Admin
+							</NextLink>
+						)}
 					</NavbarMenuItem>
 					<NavbarMenuItem className="flex gap-2">
 						{!user && (
